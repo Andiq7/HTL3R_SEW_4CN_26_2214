@@ -1,5 +1,6 @@
 __author__ = "Andrija Pavlovic"
-__doc__ = "UE_00_Kapitel_2"
+__doc__ = "UE_00_Kapitel_2_Zahlen_und_Zeichenketten"
+
 
 #print(3 + "4")
 
