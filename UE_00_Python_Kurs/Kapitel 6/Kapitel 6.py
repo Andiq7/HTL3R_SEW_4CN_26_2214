@@ -19,4 +19,13 @@ elif preis > 60:
      preis = preis - 0.1 * preis # 10% Rabatt
 else:
      preis = preis - 0.25 * preis # 25% Rabatt
-print(preis)
+print(preis, "\n")
+
+
+#Frage 4
+var_x = 5
+var_i = 0
+while var_i < 7:
+    var_x = var_x + 1
+    var_i = var_i + 2
+print(var_x)
