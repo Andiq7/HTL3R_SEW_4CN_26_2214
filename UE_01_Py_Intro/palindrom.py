@@ -109,8 +109,3 @@ def get_dec_hex_palindrom(x):
         if hex_repr == hex_repr[::-1]:
             return n
     return -1
-
-print(get_dec_hex_palindrom(1000))     # 979
-print(get_dec_hex_palindrom(10000))    # 3003
-print(get_dec_hex_palindrom(100000))   # 98689
-print(get_dec_hex_palindrom(1))        # -1
