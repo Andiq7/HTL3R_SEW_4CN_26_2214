@@ -16,3 +16,8 @@ if __name__ == "__main__":
     for n in range(200):
         m_list.append(M(n))
     print(m_list)
+
+    m_dict = {}
+    for n in range(200):
+        m_dict[n] = M(n)
+    print(m_dict)
