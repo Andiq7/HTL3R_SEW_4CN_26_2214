@@ -81,6 +81,24 @@ def to_base(number:int, base:int)->str:
     return result
 
 def get_dec_hex_palindrom(x):
+    """
+        Gibt die größte Zahl kleiner als x zurück, die sowohl im Dezimalsystem als auch im Hexadezimalsystem ein Palindrom ist.
+
+        Ein Palindrom liest sich von vorne und hinten gleich.
+
+        Beispiele:
+        >>> get_dec_hex_palindrom(1000)
+        979
+        >>> get_dec_hex_palindrom(10000)
+        3003
+        >>> get_dec_hex_palindrom(100000)
+        98689
+        >>> get_dec_hex_palindrom(1)
+        -1
+
+        :param x: Die obere Grenze (exklusiv) für die Suche nach Palindromen.
+        :return: Die größte gefundene Zahl oder -1, falls keine existiert.
+        """
     if x <= 1:
         return -1
 
