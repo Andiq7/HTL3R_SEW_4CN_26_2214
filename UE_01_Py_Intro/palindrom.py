@@ -62,3 +62,37 @@ def palindrom_product(x: int):
                 if prod < x and is_palindrom(str(prod)) and prod > max_pal:
                     max_pal = prod
         return max_pal
+
+def to_base(number:int, base:int)->str:
+    if base < 2 or base > 36:
+        raise ValueError("Basis muss zwischen 2 und 36 liegen")
+
+    if number == 0:
+        return "0"
+
+    digits = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    result = ""
+
+    n = number
+    while n > 0:
+        n, remainder = divmod(n, base)
+        result = digits[remainder] + result
+
+    return result
+
+def get_dec_hex_palindrom(x):
+    if x <= 1:
+        return -1
+
+    for n in range(x - 1, -1, -1):
+        if not is_palindrom(str(n)):
+            continue
+        hex_repr = to_base(n, 16)  # hier wird deine to_base Methode genutzt
+        if hex_repr == hex_repr[::-1]:
+            return n
+    return -1
+
+print(get_dec_hex_palindrom(1000))     # 979
+print(get_dec_hex_palindrom(10000))    # 3003
+print(get_dec_hex_palindrom(100000))   # 98689
+print(get_dec_hex_palindrom(1))        # -1
