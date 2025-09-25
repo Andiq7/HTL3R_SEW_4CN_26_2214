@@ -109,3 +109,10 @@ def get_dec_hex_palindrom(x):
         if hex_repr == hex_repr[::-1]:
             return n
     return -1
+
+if __name__ == "__main__":
+    print(is_palindrom("otto"))  # True
+    print(is_palindrom_sentence("Eine güldne, gute Tugend: Lüge nie!"))  # True
+    print(palindrom_product(101110))  # 101101
+    print(to_base(255, 16))  # FF
+    print(get_dec_hex_palindrom(1000))  # 979
